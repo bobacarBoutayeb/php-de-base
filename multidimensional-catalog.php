@@ -43,6 +43,7 @@ foreach ($products as $product) {
     echo '<div>';
     echo '<h3>' . $product["name"] . '</h3>';
     echo '<p> Prix : ' . $product["price"] . ' TTC</p>';
+    echo '<p> Prix HT : ' . formatPrice(priceExcludingVAT($product["price"])) . ' HT</p>';
     echo '<p> Poids : ' . $product["weight"] . 'g</p>';
     echo '<img src ="' . $product["picture_url"] . '">';
     echo '<p> Remise : ' . $product["discount"] . '%</p>';
