@@ -14,8 +14,10 @@ echo '
     <div>
         <h3>' . $vegetables["name"] . '</h3>
         <p> Prix : ' . formatPrice($vegetables["price"]) . ' TTC</p>
-        <p> Prix : ' .  formatPrice(priceExcludingVAT($vegetables["price"])) . ' HT</p>
-        <p> Poids : ' . $vegetables["weight"] . 'kg</p>
+        <p> Prix : ' . formatPrice(priceExcludingVAT($vegetables["price"])) . ' HT</p>
+        <p> Remise : ' . $vegetables["discount"] . ' %</p>
+        <p> Prix remisé : ' . formatPrice(discountedPrice($vegetables["price"], $vegetables["discount"])) . ' TTC</p>
+        <p> Poids : ' . $vegetables["weight"] . ' kg</p>
         <img src ="' . $vegetables["picture_url"] . '" alt = "">
     </div>
     ';
