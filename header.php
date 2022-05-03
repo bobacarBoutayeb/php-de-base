@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr">
-
+<?php include_once __DIR__ . 'my-functions.php';?>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -111,12 +111,13 @@
                                                             <div class="row">
                                                                 <div class="col-md-6 mb-4">
 
-                                                                    <select class="select">
-                                                                        <option value="1">Pays</option>
-                                                                        <option value="2">France</option>
-                                                                        <option value="3">Belgique</option>
-                                                                        <option value="4">Luxembourg</option>
-                                                                    </select>
+                                                                        <select class="select">
+                                                                            <option value="1">Pays</option>
+                                                                            <option value="2">France</option>
+                                                                            <option value="3">Belgique</option>
+                                                                            <option value="4">Luxembourg</option>
+                                                                        </select>
+
 
                                                                 </div>
                                                                 <div class="col-md-6 mb-4">
