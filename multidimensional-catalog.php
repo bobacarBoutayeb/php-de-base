@@ -35,4 +35,16 @@ echo '<img src ="' . $products["shoes"]["picture_url"] . '">';
 echo '<p> Remise : ' . $products["shoes"]["discount"] . ' %</p>';
 echo '</div>';
 
+echo '<h4>Boucle FOREACH :</h4>' . PHP_EOL;
+
+foreach ($products as $product) {
+    echo '<div>';
+    echo '<h3>' . $product["name"] . '</h3>';
+    echo '<p> Prix : ' . $product["price"] . '</p>';
+    echo '<p> Poids : ' . $product["weight"] . 'g</p>';
+    echo '<img src ="' . $product["picture_url"] . '">';
+    echo '<p> Remise : ' . $product["discount"] . '%</p>';
+    echo '</div>';
+}
+
 include_once 'footer.php';
