@@ -13,7 +13,7 @@ $vegetables = [
 echo '
     <div>
         <h3>' . $vegetables["name"] . '</h3>
-        <p> Prix : ' . $vegetables["price"] . '</p>
+        <p> Prix : ' . formatPrice($vegetables["price"]) . ' TTC</p>
         <p> Poids : ' . $vegetables["weight"] . 'kg</p>
         <img src ="' . $vegetables["picture_url"] . '" alt = "">
     </div>

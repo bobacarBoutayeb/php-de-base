@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr">
-<?php include_once __DIR__ . 'my-functions.php';?>
+<?php include_once 'my-functions.php';?>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

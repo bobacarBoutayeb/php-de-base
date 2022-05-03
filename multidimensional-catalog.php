@@ -22,6 +22,7 @@ $products = [
 echo '<div>';
 echo '<h3>' . ucfirst($products["seat"]["name"]) . '</h3>';
 echo '<p> Prix : ' . $products["seat"]["price"] . '</p>';
+echo '<p> Prix : ' . $products["seat"]["price"] . '</p>';
 echo '<p> Poids : ' . $products["seat"]["weight"] . ' g</p>';
 echo '<img src ="' . $products["seat"]["picture_url"] . '">';
 echo '<p> Remise : ' . $products["seat"]["discount"] . ' %</p>';
@@ -29,6 +30,7 @@ echo '</div>';
 
 echo '<div>';
 echo '<h3>' . ucfirst($products["shoes"]["name"]) . '</h3>';
+echo '<p> Prix : ' . $products["shoes"]["price"] . '</p>';
 echo '<p> Prix : ' . $products["shoes"]["price"] . '</p>';
 echo '<p> Poids : ' . $products["shoes"]["weight"] . ' g</p>';
 echo '<img src ="' . $products["shoes"]["picture_url"] . '">';
@@ -40,7 +42,7 @@ echo '<h4>Boucle FOREACH :</h4>' . PHP_EOL;
 foreach ($products as $product) {
     echo '<div>';
     echo '<h3>' . $product["name"] . '</h3>';
-    echo '<p> Prix : ' . $product["price"] . '</p>';
+    echo '<p> Prix : ' . $product["price"] . ' TTC</p>';
     echo '<p> Poids : ' . $product["weight"] . 'g</p>';
     echo '<img src ="' . $product["picture_url"] . '">';
     echo '<p> Remise : ' . $product["discount"] . '%</p>';
