@@ -2,7 +2,7 @@
 
 include_once 'header.php';
 
-$products = ["Légumes", "Chaise", "Chaussure"];
+$products = ["Vegetables", "Seat", "Shoes"];
 
 sort($products);
 echo $products[0] . PHP_EOL;
