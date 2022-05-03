@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Le seul site français à référencer "> <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="Styles/styleheader.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/producteur.css">
+    <link href="Styles/stylefooter.css" rel="stylesheet">
+    
+    <title>Amazen</title>
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+        </path>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 16 16">
+        <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 16 16">
+        <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 16 16">
+        <path
+            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+    </symbol>
+</svg>
+
+<body>
+
+    <!-- header -->
+
+    
+    <div class="doubleheader">
+
+        <div class="container-fluid">
+            <header class="d-flex flex-wrap align-items-center justify-content-around justify-content-md-around py-3">
+                <a href="index.html"><img class="navlogo" src="Static/img/LOGO_AMAZEN-1.avif" alt="logo"></a>
+                <div class="col-md-3">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img class="nav1" src="Static/img/geolocpic.png" alt="iconegeolocalisation">Me
+                        géolocaliser
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabel">Renseignez votre adresse pour
+                                        découvrir les produits près de chez vous</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+
+
+
+
+                                    <div class="container py-5">
+                                        <div class="row d-flex justify-content-center align-items-center">
+                                            <div class="col">
+                                                <div class="card my-4 shadow-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-xl-12">
+                                                            <div class="card-body p-md-5 text-black">
+                                                                <h3 class="mb-4 text-uppercase">Votre adresse</h3>
+
+                                                                <div class="row">
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-outline">
+                                                                            <input type="text" id="form3Example1m"
+                                                                                class="form-control form-control-lg" />
+                                                                            <label class="form-label"
+                                                                                for="form3Example1m">Prénom</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-outline">
+                                                                            <input type="text" id="form3Example1n"
+                                                                                class="form-control form-control-lg" />
+                                                                            <label class="form-label"
+                                                                                for="form3Example1n">Nom</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-outline mb-4">
+                                                                    <input type="text" id="form3Example8"
+                                                                        class="form-control form-control-lg" />
+                                                                    <label class="form-label"
+                                                                        for="form3Example8">Adresse</label>
+                                                                </div>
+
+
+
+                                                                <div class="row">
+                                                                    <div class="col-md-6 mb-4">
+
+                                                                        <select class="select">
+                                                                            <option value="1">Pays</option>
+                                                                            <option value="2">France</option>
+                                                                            <option value="3">Belgique</option>
+                                                                            <option value="4">Luxembourg</option>
+                                                                        </select>
+
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+
+                                                                        <div class="form-outline mb-4">
+                                                                            <input type="text" id="form3Example3"
+                                                                                class="form-control form-control-lg" />
+                                                                            <label class="form-label"
+                                                                                for="form3Example3">Ville</label>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-outline mb-4">
+                                                                    <input type="text" id="form3Example3"
+                                                                        class="form-control form-control-lg" />
+                                                                    <label class="form-label"
+                                                                        for="form3Example3">Code Postal</label>
+                                                                </div>
+
+                                                                <div class="form-outline mb-4">
+                                                                    <input type="text" id="form3Example2"
+                                                                        class="form-control form-control-lg" />
+                                                                    <label class="form-label"
+                                                                        for="form3Example2">Email</label>
+                                                                </div>
+
+                                                                <div class="d-flex justify-content-end pt-3">
+                                                                    <button type="button"
+                                                                        class="btn btn-success btn-lg ms-2"
+                                                                        style="background-color:hsl(210, 100%, 50%) ">Valider adresse</button>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+                    <input type="search" class="form-control formperso" placeholder="Taper ma recherche..."
+                        aria-label="Search">
+                </form>
+                <div class="col-md-3 text-end">
+
+                    <button type="button" class="btn"><img class="nav2" src="Static/img/panierpic.png"
+                            alt="iconepanier">Panier
+                    </button>
+
+                    <button type="button" class="btn"> <img class="nav3" src="Static/img/comptepic.png"
+                            alt="iconecompte"> Mon
+                        compte</button>
+                </div>
+            </header>
+        </div>
+
+    
+
+        <nav class="navbar navbar-expand-lg navbar-light " id="categ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page_produit.html">Alimentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page_produit.html">Mobilier Déco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page_produit.html">Mode</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page_produit.html">Jeux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page_produit.html">Electronique</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="page_produit.html">Objets cuisine</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <main class="p-5 custom-color-secondary">
+        <header class="col-6 offset-3 mb-5">
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="Static/img/home/home_fond_accroche.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="Static/img/home/home_producteur.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- 
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="Static/img/home/home_fond_accroche.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-white">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="Static/img/home/home_producteur.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block text-white">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div> -->
+        </header>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5" id="products">
+            <div class="col">
+                <a href="page_produit.html">
+                    <div class="card text-center">
+                        <img src="Static/img/home/maraicher.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Maraichers</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="page_produit.html">
+                    <div class="card text-center">
+                        <img src="Static/img/home/deco.png" class="card-img-top img-responsive" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobilier déco</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="page_produit.html">
+                    <div class="card text-center">
+                        <img src="Static/img/home/mode.png" class="card-img-top img-responsive" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mode</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="page_produit.html">
+                    <div class="card text-center">
+                        <img src="Static/img/home/jeux.png" class="card-img-top img-responsive" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeux</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="page_produit.html">
+                    <div class="card text-center">
+                        <img src="Static/img/home/electro.png" class="card-img-top img-responsive" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Electronique</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="page_produit.html">
+                    <div class="card text-center">
+                        <img src="Static/img/home/cuisine.png" class="card-img-top img-responsive" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Objets cuisine</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid nobg ptblr-5">
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <h5>Mieux nous connaître</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">A propos d'Amazen</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="equipe.html" class="nav-link p-0 text-muted">Equipe</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Durabilité</a></li>
+                    <li class="nav-item mb-2"><a href="producteur.html" class="nav-link p-0 text-muted">Les
+                            producteurs et
+                            vendeurs</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <h5>Vendez sur Amazen</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Créer un compte
+                            vendeurs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tuto du vendeur</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2">
+                <h5>Aide</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Forum général</a></li>
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <button class="btn btn-warning" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-2 py-4 bdtoporange">
+            <p>© 2022 Amazen, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#">
+                        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"
+                            height="24px">
+                            <path
+                                d="M 5 3 C 3.897 3 3 3.897 3 5 L 3 19 C 3 20.103 3.897 21 5 21 L 11.621094 21 L 14.414062 21 L 19 21 C 20.103 21 21 20.103 21 19 L 21 5 C 21 3.897 20.103 3 19 3 L 5 3 z M 5 5 L 19 5 L 19.001953 19 L 14.414062 19 L 14.414062 15.035156 L 16.779297 15.035156 L 17.130859 12.310547 L 14.429688 12.310547 L 14.429688 10.574219 C 14.429687 9.7862188 14.649297 9.2539062 15.779297 9.2539062 L 17.207031 9.2539062 L 17.207031 6.8222656 C 16.512031 6.7512656 15.814234 6.71675 15.115234 6.71875 C 13.041234 6.71875 11.621094 7.9845938 11.621094 10.308594 L 11.621094 12.314453 L 9.2773438 12.314453 L 9.2773438 15.039062 L 11.621094 15.039062 L 11.621094 19 L 5 19 L 5 5 z" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" width="24px" height="24px">
+                            <path
+                                d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 30 30" width="24px" height="24px">
+                            <path
+                                d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z" />
+                        </svg></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
