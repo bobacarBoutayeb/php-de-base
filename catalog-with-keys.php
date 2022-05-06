@@ -4,7 +4,7 @@ include_once 'header.php';
 
 $vegetables = [
     "name" => "Mushrooms",
-    "price" => 3,
+    "price" => 30.11,
     "weight" => 1,
     "discount" => 50,
     "picture_url" => 'Static/img/small-produce-box 5.png',
