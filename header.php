@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="fr">
-<?php include_once 'my-functions.php';?>
+<?php
+include_once 'my-functions.php';
+include_once 'products.php';
+?>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -182,7 +185,7 @@
             </form>
             <div class="col-md-3 text-end">
 
-                <button type="button" class="btn"><img class="nav2" src="Static/img/panierpic.png"
+                <button type="button" class="btn" onclick="window.location.href='cart.php';"><img class="nav2" src="Static/img/panierpic.png"
                                                        alt="iconepanier">Panier
                 </button>
 
